@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 
 const MobileNav = () => {
   const pathname = usePathname();
+
   return (
     <header className="header">
       <Link href="/" className="flex items-center gap-2 md:py-2">
@@ -50,12 +51,10 @@ const MobileNav = () => {
 
                     return (
                       <li
+                        className={`${
+                          isActive && "gradient-text"
+                        } p-18 flex whitespace-nowrap text-dark-700`}
                         key={link.route}
-                        className={`sidebar-nav_element group ${
-                          isActive
-                            ? "bg-purple-gradient text-white"
-                            : "text-gray-700"
-                        }`}
                       >
                         <Link
                           className="sidebar-link cursor-pointer"
@@ -66,7 +65,6 @@ const MobileNav = () => {
                             alt="logo"
                             width={24}
                             height={24}
-                            className={`${isActive && "brightness-200"} `}
                           />
                           {link.label}
                         </Link>

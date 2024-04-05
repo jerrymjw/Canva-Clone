@@ -5,11 +5,11 @@ import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
 import { Button } from "../ui/button";
 
 const Sidebar = () => {
   const pathname = usePathname();
+
   return (
     <aside className="sidebar">
       <div className="flex size-full flex-col gap-4">
@@ -43,7 +43,7 @@ const Sidebar = () => {
                         alt="logo"
                         width={24}
                         height={24}
-                        className={`${isActive && "brightness-200"} `}
+                        className={`${isActive && "brightness-200"}`}
                       />
                       {link.label}
                     </Link>
@@ -71,7 +71,7 @@ const Sidebar = () => {
                         alt="logo"
                         width={24}
                         height={24}
-                        className={`${isActive && "brightness-200"} `}
+                        className={`${isActive && "brightness-200"}`}
                       />
                       {link.label}
                     </Link>
